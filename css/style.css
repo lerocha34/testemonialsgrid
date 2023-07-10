@@ -1,0 +1,136 @@
+body{
+    background-color: rgb(231, 238, 244);
+}
+
+.container{
+    display:grid;
+    grid-gap:20px;
+    grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    margin-bottom:20px
+}
+
+.daniel{
+    grid-area: daniel;
+    background-color:rgb(115, 63, 200);
+    border-radius:15px;
+    
+    
+
+}
+.jonathan{
+    grid-area: jonathan;
+    background-color: rgb(73, 85, 107);
+    border-radius:15px;
+}
+.kira{
+    grid-area: kira;
+    background-color:#fff;
+    border-radius:15px;
+}
+.jeanette{
+    grid-area: jeanette;
+    background-color: #fff;
+    border-radius:15px;
+}
+.patrick{
+    grid-area:patrick;
+    background-color:rgb(27 33 47);
+    border-radius:15px;
+}
+
+.danieltitle{
+    display:flex;
+    justify-content:space-between;
+    
+
+}
+.aspas{
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-size:cover;
+    width:140px;
+    height:140px;
+    margin-right:80px;
+}
+
+.title{
+    display:flex;
+    align-items:center;
+    margin-left:40px;
+    margin-top: 20px;
+    margin-bottom:40px;
+}
+
+.title .name{
+    color: rgb(250, 214, 255);
+
+}
+.title .name h3{
+    color: rgb(163, 119, 230);
+    font-size:15px;
+    margin:0;
+}
+.profile img{
+    width:50px;
+    border-radius:50%;  
+    border:2px solid rgb(169, 131, 218);
+    margin-right:20px;
+}
+.quote{
+    margin:40px;
+}
+
+.daniel .quote-title{
+    margin-top:-80px;;
+}
+.quote-title{
+    color:rgb(255, 238, 255);
+    font-size:25px;
+
+    
+}
+.quote-quote{
+    margin-top:20px;
+    color:rgb(183, 146, 251);
+    font-size:18px;
+}
+.jeanette .name{
+    color:rgb(84, 91, 97);
+}
+.jeanette .quote-title{
+    color:rgb(79 83 92);
+}
+.jeanette .quote-quote{
+    color:rgb(151 152 156);
+}
+
+.kira .name{
+    color:rgb(84, 91, 97);
+}
+.kira .quote-title{
+    color:rgb(79 83 92);
+}
+.kira .quote-quote{
+    color:rgb(151 152 156);
+}
+
+
+@media (min-width:374px) and (max-width:1023px){
+
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+    .aspas{
+        display:none;
+    }
+
+    .quote-title, .quote-quote{
+        font-size:25px;
+        
+    }
+    .kira .quote-quote, .jeanette .quote-quote{
+        color:grey;
+    }
+}
